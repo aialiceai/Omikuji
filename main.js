@@ -1,28 +1,18 @@
-body{
-    background: #efefef;
-}
+'use strict';
 
-#btn{
-    width: 200px;
-    height: 200px;
-    background: #ef454a;
-    border-radius: 50%;
-    margin: 30px auto;
-    text-align: center;
-    line-height: 200px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 42px;
-    cursor: pointer;
-    box-shadow: 0 10px 0 #d1483e;
-    user-select: none;
-}
+{
+    const btn = document.getElementById('btn');
 
-#btn:hover {
-    opacity: 0.9;
-}
-
-#btn:active{
-    box-shadow: 0 5px 0 #d1483e;
-    margin-top: 35px;
+    btn.addEventListener('click', () => {
+        const n = Math.random();
+        if (n < 0.01) {
+            btn.textContent = '超大吉';
+        }else if (n < 0.06){
+            btn.textContent = '大吉';
+        }else if (n < 0.21){
+            btn.textContent = '中吉';
+        }else {
+            btn.textContent = '小吉';
+        }
+    });
 }
